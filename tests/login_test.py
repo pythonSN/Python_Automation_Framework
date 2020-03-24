@@ -5,7 +5,6 @@ from pages.homePage import HomePage
 from utils import utils as utils
 import allure
 import moment
-import inspect
 
 
 @pytest.mark.usefixtures("test_setup")
@@ -37,8 +36,7 @@ class TestLogin():
             screenshot_name = function_name + "_" + current_time
             allure.attach(self.driver.get_screenshot_as_png(), name=screenshot_name,
                           attachment_type=allure.attachment_type.JPG)
-            driver.get_screenshot_as_file(
-                "C:/Study/Python_Automation_Framework/screenshots/" + screenshot_name + ".jpg")
+            driver.get_screenshot_as_file(utils.SCREENSHOTS_PATH + screenshot_name + ".jpg")
             raise
         except:
             print("There was an exception")
@@ -47,8 +45,7 @@ class TestLogin():
             screenshot_name = function_name + "_" + current_time
             allure.attach(self.driver.get_screenshot_as_png(), name=screenshot_name,
                           attachment_type=allure.attachment_type.JPG)
-            driver.get_screenshot_as_file(
-                "C:/Study/Python_Automation_Framework/screenshots/" + screenshot_name + ".jpg")
+            driver.get_screenshot_as_file(utils.SCREENSHOTS_PATH + screenshot_name + ".jpg")
             raise
         else:
             print("No exception occurred")

@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+from utils import utils as utils
+
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="ie", help="Type browser name: chrome or ie or edge")
@@ -10,11 +12,11 @@ def test_setup(request):
     global driver
     browser = request.config.getoption("--browser")
     if browser == 'chrome':
-        driver = webdriver.Chrome(executable_path="C:/Study/Python_Automation_Framework/drivers/chromedriver.exe")
+        driver = webdriver.Chrome(executable_path=utils.CHROME_PATH)
     elif browser == 'ie':
-        driver = webdriver.Ie(executable_path="C:/Study/Python_Automation_Framework/drivers/IEDriverServer.exe")
+        driver = webdriver.Ie(executable_path=utils.IE_PATH)
     elif browser == 'edge':
-        driver = webdriver.Edge(executable_path="C:/Study/Python_Automation_Framework/drivers/MicrosoftWebDriver.exe")
+        driver = webdriver.Edge(executable_path=utils.EDGE_PATH)
     driver.implicitly_wait(5)
     driver.maximize_window()
     request.cls.driver = driver
