@@ -36,7 +36,7 @@ class TestLogin():
             screenshot_name = function_name + "_" + current_time
             allure.attach(self.driver.get_screenshot_as_png(), name=screenshot_name,
                           attachment_type=allure.attachment_type.PNG)
-            driver.get_screenshot_as_file(utils.SCREENSHOTS_PATH + screenshot_name + ".png") 
+            driver.get_screenshot_as_file(utils.SCREENSHOTS_PATH + screenshot_name + ".png")
             raise
         except:
             print("There was an exception")
