@@ -11,3 +11,4 @@ driver.find_element_by_link_text("Logout").click()
 driver.close()
 driver.quit()
 print("Test Completed")
+
