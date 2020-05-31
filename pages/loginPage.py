@@ -19,3 +19,4 @@ class LoginPage():
     def click_login(self):
         self.driver.find_element_by_id("btnLogin").click()
 
+

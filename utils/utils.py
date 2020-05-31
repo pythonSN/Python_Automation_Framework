@@ -14,6 +14,7 @@ PASSWORD = "admin123"
 
 CHROME_PATH = "C:/Study/Python_Automation_Framework/drivers/chromedriver.exe"
 IE_PATH = "C:/Study/Python_Automation_Framework/drivers/IEDriverServer.exe"
-EDGE_PATH = "C:/Study/Python_Automation_Framework/drivers/MicrosoftWebDriver.exe"
+EDGE_PATH = "C:/Study/Python_Automation_Framework/drivers/msedgedriver.exe"
+FIREFOX_PATH = "C:/Study/Python_Automation_Framework/drivers/geckodriver.exe"
 
 SCREENSHOTS_PATH = "C:/Study/Python_Automation_Framework/screenshots/"

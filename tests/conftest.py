@@ -17,6 +17,8 @@ def test_setup(request):
         driver = webdriver.Ie(executable_path=utils.IE_PATH)
     elif browser == 'edge':
         driver = webdriver.Edge(executable_path=utils.EDGE_PATH)
+    elif browser == 'firefox':
+        driver = webdriver.Edge(executable_path=utils.FIREFOX_PATH)
     driver.implicitly_wait(5)
     driver.maximize_window()
     request.cls.driver = driver
@@ -24,3 +26,4 @@ def test_setup(request):
     driver.close()
     driver.quit()
     print("Test Completed")
+

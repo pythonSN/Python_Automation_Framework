@@ -7,3 +7,4 @@ class Locators():
     username_text_box_id = "txtUsername"
     password_textbox_id = "txtPassword"
     login_button_id = "btnLogin"
+
